@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Voluntários - ONG</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <header class="navbar">
+            <div class="container">
+                <h1 class="nav-logo">Portal de Voluntários</h1>
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="../cadastro/index.html">Cadastro</a></li>
+                        <li><a href="../lista/index.html" class="active">Lista de Voluntários</a></li>
+                        <li><a href="../index.html" id="logout-btn">Sair</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="container">
+            <div class="page-header">
+                <h2>Lista de Voluntários</h2>
+                <p>Gerencie os voluntários cadastrados</p>
+            </div>
+
+            <div class="card">
+                <div class="list-actions">
+                    <div class="search-box">
+                        <input type="text" id="search-input" placeholder="Buscar por nome...">
+                    </div>
+                    <button id="clear-all-btn" class="btn-danger">Limpar Tudo</button>
+                </div>
+
+                <div id="volunteer-count" class="volunteer-count">0 voluntários encontrados</div>
+
+                <div id="volunteers-container" class="volunteers-container">
+                    <!-- Volunteer cards will be dynamically added here -->
+                    <div class="empty-state">
+                        <img src="../assets/empty.png" alt="Sem voluntários">
+                        <p>Nenhum voluntário cadastrado</p>
+                        <a href="../cadastro/index.html" class="btn-primary">Cadastrar Agora</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

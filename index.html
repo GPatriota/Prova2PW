@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONG - Portal de Voluntários</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div id="login-container">
+            <div class="login-card">
+              <h1>Portal de Voluntários</h1>
+              <div class="login-logo">
+                <img src="assets/ong.jfif" alt="Logo">
+              </div>
+          
+              <div class="tabs">
+                <button class="tab-button active" data-tab="login">Login</button>
+                <button class="tab-button" data-tab="register">Cadastro</button>
+              </div>
+          
+              <div class="tab-content active" id="tab-login">
+                <form id="login-form">
+                  <div class="form-group">
+                    <label for="login-username">Usuário</label>
+                    <input type="text" id="login-username" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="login-password">Senha</label>
+                    <input type="password" id="login-password" required>
+                  </div>
+                  <button type="submit" class="btn-primary">Entrar</button>
+                </form>
+                <p class="tab-switch-text">
+                  Não possui cadastro? <a href="#" data-tab="register" class="switch-tab-link">Cadastre-se aqui</a>
+                </p>
+                <div id="login-error" class="error-message"></div>
+              </div>
+          
+              <div class="tab-content" id="tab-register">
+                <form id="register-form">
+                  <div class="form-group">
+                    <label for="register-username">Usuário*</label>
+                    <input type="text" id="register-username" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="register-cep">CEP*</label>
+                    <input type="text" id="register-cep" required>
+                    <small id="cep-status" class="status-message"></small>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="register-street">Logradouro</label>
+                    <input type="text" id="register-street" disabled>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="register-city">Cidade</label>
+                    <input type="text" id="register-city" disabled>
+                  </div>
+                  <div class="form-group">
+                    <label for="register-password">Senha*</label>
+                    <input type="password" id="register-password" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="register-confirm-password">Confirmar Senha*</label>
+                    <input type="password" id="register-confirm-password" required>
+                  </div>
+                  <button type="submit" class="btn-primary">Cadastrar</button>
+                </form>
+                <p class="tab-switch-text">
+                  Já possui login? <a href="#" data-tab="login" class="switch-tab-link">Faça login aqui</a>
+                </p>
+                <div id="register-error" class="error-message"></div>
+                <div id="register-success" class="success-message"></div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+    </div>
+    
+    <script type="module" src="main.js"></script>
+</body>
+</html>

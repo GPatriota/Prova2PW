@@ -1,0 +1,38 @@
+1- Como foi feita a integração com a API do ViaCEP?
+Criei um addEventListener pro campo CEP, daí sempre que o usuário digita ele realiza as funções dentro dele, sendo limpar caracteres 
+nao numericos (apenas por prevenção), chamar uma função pra limpar os campos relacionados a ele caso tenha 0 dígitos e por fim, 
+se tiver 8 digítos numéricos, ele realiza a função que busca a API, que possui tratanentos pra erros na busca e também para caso apenas não
+ache o CEP digitado, mas se encontrar, os valores dos campos como cidade por exemplo, são completos.
+
+2 - Como a imagem aleatória foi gerada?
+Eu utilizei uma api, chamada randomuser, que a partir de uma url específica, me gera imagens aleatórias de alguma categoria, no caso a que eu
+escolhi foi homens, tendo em vista isso, para não gerar sempre a mesma imagem e como a url utiliza de um número de 0 a 99, criei um sorteador
+de número e o utilizei
+
+3 - Como você utilizou o LocalStorage?
+Utilizei o LocalStorage de diversas formas nesse projeto, mas basicamente, a utilização dele consistiu apenas em métodos para criar, visualizar 
+e para deletar, de maneira que por exemplo, para cadastrar um voluntário eu crio dentro do LocalStorage, para fazer a verificação do email 
+ou para ver os voluntários cadastrados que devem aparecer na lista é utilizado algo parecido com um "get" e para excluir os voluntários eu 
+deleto eles do LocalStorage, além do sistema de login, que também realiza um "post" e "get" no LocalStorage.
+
+4 - Como você organizou os cards na tela?
+Criei uma função ao criar que salva os dados no LocalStorage, depois uma função que le o localStorage (usada na tela de lista), assim, caso
+exista voluntários no localStorage, a partir de um inner.HTML eu adiciono os cards de maneira organizada e estilizada usando o css.
+
+5 - Como foi implementado o sistema de login e controle de acesso?
+Eu criei um form inicial com dois campos pro usuário digitar, neste sistema, não utilizo o LocalStorage para criar contas e nem nada, existem
+apenas as credenciais fixadas para acesso ao sistema, sendo elas, "admin" tanto para o campo de login quanto para o de senha.
+
+6 - Como foi feito o controle de e-mail duplicado?
+Ele le o LocalStorage, lendo tudo que está cadastrado em volunteers ou é igual um array vazio, logo após isso, ele ve se existe algum email 
+igual ao digitado, utilizando um ".some(v => v.email.toLowerCase() === email.toLowerCase());" e se tiver, ele cai num if impedindo de continuar.
+
+7 - Como foi implementado o redirecionamento após 5 minutos de inatividade?
+O redirecionamento depois de 5 minutos de inatividade foi feito usando um timer que conta o tempo sem nenhuma ação do usuário.
+Sempre que o usuário mexe o mouse, aperta uma tecla, rola a página ou toca na tela, o timer é zerado e começa a contar de novo. 
+Se passar 5 minutos sem nenhuma dessas ações, aparece um alerta avisando e a página muda para outra
+
+8 - O que você faria diferente se fosse um projeto real?
+Se fosse um projeto real, a estilização poderia ser mais bem pensada, poderia existir possibilidades do usuário inserir uma foto específica,
+não utilizar uma aleatória, também poderia ser pensado em mais abas do site, pros voluntários conseguirem acessar (gerando um acesso pra cada um),
+outro pensamento seria a divisão de "cargos" dentro do site, tendo o voluntário, que veria uma parte do site, e o superior que cadastra voluntários.

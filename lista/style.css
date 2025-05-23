@@ -1,0 +1,226 @@
+/* Lista Page Styles */
+body {
+    background-color: #6dc1f1;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.navbar {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 0;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+}
+
+.nav-menu li {
+    margin-left: 1.5rem;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+    transition: var(--transition);
+    border-radius: var(--border-radius);
+}
+
+.nav-menu a:hover, .nav-menu a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+main.container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.page-header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.page-header p {
+    color: var(--text-medium);
+}
+
+
+.list-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.search-box {
+    flex: 1;
+    max-width: 500px;
+}
+
+.search-box input {
+    padding: 0.75rem 1rem;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--text-light);
+    width: 100%;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.search-box input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(66, 133, 244, 0.2);
+    outline: none;
+}
+
+.btn-danger {
+    background-color: var(--error-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-danger:hover {
+    background-color: #D32F2F;
+    transform: translateY(-2px);
+}
+
+.volunteer-count {
+    color: var(--text-medium);
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.volunteers-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.volunteer-card {
+    background-color: var(--background-white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: var(--transition);
+    animation: fadeIn 0.5s ease;
+}
+
+.volunteer-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    padding: 1.5rem;
+    text-align: center;
+    border-bottom: 1px solid var(--text-light);
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    border: 3px solid var(--primary-color);
+    overflow: hidden;
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.info-group {
+    margin-bottom: 1rem;
+}
+
+.info-label {
+    font-weight: 600;
+    color: var(--text-medium);
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+}
+
+.card-actions {
+    padding: 1rem 1.5rem;
+    border-top: 1px solid var(--text-light);
+    text-align: right;
+}
+
+.btn-delete {
+    background-color: transparent;
+    color: var(--error-color);
+    border: 1px solid var(--error-color);
+    border-radius: var(--border-radius);
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-delete:hover {
+    background-color: var(--error-color);
+    color: white;
+}
+
+.empty-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.empty-state img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    border: 3px solid var(--text-light);
+}
+
+.empty-state p {
+    color: var(--text-medium);
+    margin-bottom: 1.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .list-actions {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .search-box {
+        max-width: 100%;
+    }
+}
