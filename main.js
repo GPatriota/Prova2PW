@@ -5,12 +5,12 @@ if (logoutBtn) {
   logoutBtn.addEventListener('click', e => {
     e.preventDefault();
     sessionStorage.removeItem('isLoggedIn');
-    window.location.href = '/index.html';
+    window.location.href = 'index.html';
   });
 }
 
 if (!isLoggedIn && !window.location.pathname.endsWith('index.html')) {
-  window.location.href = '/index.html';
+  window.location.href = 'index.html';
 }
 
 // ===== Usuário fixo =====
